@@ -225,7 +225,7 @@ ul { list-style: none; }
 }
 .nav__logo { display: flex; align-items: center; }
 .nav__logo-img {
-  height: 24px;
+  height: 36px;
   width: auto;
   color: var(--white);
   filter: brightness(0) invert(1);
