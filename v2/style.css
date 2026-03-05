@@ -373,7 +373,7 @@ ul { list-style: none; }
   gap: 8px;
   font-size: 13px;
   font-weight: 400;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.65);
 }
 .hero__proof-item svg { color: var(--accent-cyan); flex-shrink: 0; }
 
@@ -445,7 +445,7 @@ ul { list-style: none; }
 }
 .proof-bar__label {
   font-size: 13px;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.65);
   font-weight: 400;
 }
 .proof-bar__divider {
@@ -545,7 +545,7 @@ ul { list-style: none; }
 }
 .why__card p {
   font-size: 15px;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.65);
   line-height: 1.6;
   font-weight: 300;
   position: relative;
@@ -886,7 +886,7 @@ ul { list-style: none; }
 }
 .timeline__content p {
   font-size: 15px;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.65);
   line-height: 1.65;
   font-weight: 300;
 }
@@ -926,7 +926,7 @@ ul { list-style: none; }
 }
 .app__sub {
   font-size: 17px;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.65);
   line-height: 1.7;
   margin-bottom: 32px;
   font-weight: 300;
@@ -942,7 +942,7 @@ ul { list-style: none; }
   align-items: center;
   gap: 12px;
   font-size: 15px;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.75);
   font-weight: 400;
 }
 .app__features li::before {
@@ -1060,7 +1060,7 @@ ul { list-style: none; }
 }
 .trust__card p {
   font-size: 14px;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.65);
   line-height: 1.6;
   font-weight: 300;
 }
@@ -1106,7 +1106,7 @@ ul { list-style: none; }
 }
 .education__text {
   font-size: 16px;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.7);
   line-height: 1.7;
   font-weight: 300;
 }
@@ -1198,7 +1198,7 @@ ul { list-style: none; }
 }
 .faq-item__answer p {
   font-size: 15px;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.7);
   line-height: 1.7;
   font-weight: 300;
 }
@@ -1243,7 +1243,7 @@ ul { list-style: none; }
 }
 .cta__sub {
   font-size: 18px;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.7);
   line-height: 1.7;
   margin-bottom: 40px;
   font-weight: 300;
@@ -1251,7 +1251,7 @@ ul { list-style: none; }
 .cta__note {
   margin-top: 16px;
   font-size: 13px;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.55);
 }
 
 /* ============================================
@@ -1280,7 +1280,7 @@ ul { list-style: none; }
   font-size: 15px;
   margin-bottom: 20px;
   font-weight: 300;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.55);
 }
 .footer__social { display: flex; gap: 10px; }
 .footer__social-link {
@@ -1316,7 +1316,7 @@ ul { list-style: none; }
 .footer__col a {
   display: block;
   font-size: 14px;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.55);
   margin-bottom: 10px;
   transition: color 0.3s;
   font-weight: 300;
@@ -1325,7 +1325,7 @@ ul { list-style: none; }
 .footer__bottom {
   font-size: 12px;
   line-height: 1.7;
-  color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.4);
   font-weight: 300;
 }
 .footer__bottom p { margin-bottom: 6px; }
@@ -1416,3 +1416,15 @@ ul { list-style: none; }
   border-radius: 4px;
 }
 .btn:focus-visible { outline-offset: 4px; }
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .timeline__line { transform: scaleY(1) !important; }
+}
